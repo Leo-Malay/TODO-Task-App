@@ -1,0 +1,93 @@
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    overflow-x: hidden;
+    border: none;
+    outline: none;
+}
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+.task_box {
+    font-size: 10px;
+    font-weight: 500;
+    height: 400px;
+    width: 105%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.task_box span {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    width: auto;
+}
+.task_box #task_done {
+    padding: 10px;
+}
+.task_text {
+    font-size: 15px;
+    width: 220px;
+}
+.table {
+    border: collapse;
+}
+.td {
+    text-align: left;
+    vertical-align: top;
+}
+#cancel_btn {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: 900;
+    color: tomato;
+    background-color: #000000;
+    border: 1.5px solid tomato;
+    border-radius: 5px;
+    margin-right: 10px;
+    overflow: hidden;
+    transition-duration: 500ms;
+}
+#cancel_btn:hover {
+    color: #000000;
+    background-color: tomato;
+}
+.footer {
+    border-top: 1px solid #000000;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #000000;
+}
+.footer #task_text {
+    width: 90%;
+    font-size: 13px;
+    padding: 5px;
+}
+.footer #task_range {
+    margin: 15px 16px;
+}
+.footer #task_button,
+.footer #task_time {
+    width: 75px;
+    height: 30px;
+    font-weight: 600;
+}
+.footer #task_button {
+    color: #ffffff;
+    background-color: dodgerblue;
+}
+#low {
+    background-color: mediumseagreen;
+}
+#medium {
+    background-color: orange;
+}
+#high {
+    background-color: tomato;
+}

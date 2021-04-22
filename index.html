@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TODO-Task-App</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="task_box">
+                <table id="task_con"></table>
+            </div>
+        </div>
+        <center>
+            <div class="footer">
+                <input
+                    type="text"
+                    name="task"
+                    id="task_text"
+                    placeholder="Task please :)"
+                />
+                <br />
+                <input type="time" name="task_time" id="task_time" />
+                <input type="range" name="task_range" id="task_range" />
+                <input
+                    type="button"
+                    name="task_button"
+                    value="Add"
+                    id="task_button"
+                    onclick="add_task()"
+                />
+            </div>
+        </center>
+        <script src="./func.js"></script>
+        <script>
+            display_task();
+            var ot = "00:00";
+            setInterval(() => {
+                var t = get_time();
+                if (ot != t) {
+                    ot = t;
+                    task_list.forEach((element) => {
+                        if (element[2] == t) {
+                            if (element[4] == "false") {
+                                notify_me(element[2], element[1]);
+                            }
+                        }
+                    });
+                }
+            }, 5000);
+        </script>
+    </body>
+</html>
